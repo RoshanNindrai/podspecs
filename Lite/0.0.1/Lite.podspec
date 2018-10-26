@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/RoshanNindrai/Lite-v2.git", :tag => "0.0.1" }
+  s.source       = { :git => "https://github.com/RoshanNindrai/Lite-v2.git", :branch => "0.0.1" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -95,6 +95,7 @@ Pod::Spec.new do |s|
     core.source_files = 'Lite/Lite/Lite/Src/provider/**/*.swift'
     core.dependency 'Lite/Network'
     core.dependency 'Lite/Persistence'
+    s.dependency  'PromiseKit', '6.5.2'
   end
 
   s.subspec 'Network' do |network|
